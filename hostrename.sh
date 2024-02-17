@@ -13,5 +13,3 @@ hostnamectl set-hostname serverpi
 sed -i 's/127\.0\.1\.1.*/127.0.1.1\tserverpi/g' /etc/hosts
 
 echo "Der Hostname wurde erfolgreich zu 'serverpi' geändert."
-
-reboot
