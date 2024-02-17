@@ -1,5 +1,19 @@
 #!/bin/bash
 
+# Prüfe, ob das Skript als Root ausgeführt wird
+if [ "$(id -u)" != "0" ]; then
+   echo "Dieses Skript muss als Root ausgeführt werden." 1>&2
+   exit 1
+fi
+
+# Setze den Hostnamen auf serverpi
+hostnamectl set-hostname serverpi
+
+# Aktualisiere die /etc/hosts Datei
+sed -i 's/127\.0\.1\.1.*/127.0.1.1\tserverpi/g' /etc/hosts
+
+echo "Der Hostname wurde erfolgreich zu 'serverpi' geändert."
+
 sudo apt update && sudo apt upgrade
 
 sudo apt-get install -y htop ufw openssh-server apache2 lsb-release php php-mysql phpmyadmin mariadb-server libapache2-mod-php php-cli php-fpm php-json php-common php-mysql php-zip php-gd php-intl php-mbstring php-curl php-xml php-pear php-tidy php-soap php-bcmath php-xmlrpc vsftpd
