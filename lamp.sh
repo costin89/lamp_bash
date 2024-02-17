@@ -8,27 +8,16 @@ clear
 
 lxterminal -e htop
 
-sudo wget https://wordpress.org/latest.zip -O /var/www/html/wordpress.zip
-cd /var/www/html
-sudo unzip wordpress.zip
-
 sudo apt update && sudo apt upgrade
 
-sudo chown -R serverpi:www-data -R /var/www/html
-chmod 750 -R /var/www/html
+sudo chown -R admin:www-data -R /var/www/html && chmod 750 -R /var/www/html
 
-sudo chown www-data wordpress -R
-sudo chmod 755 -R /var/www/wordpress
-
-sudo chown -R serverpi:www-data -R /var/www
-chmod 750 -R /var/www
+sudo chown -R admin:www-data -R /var/www && chmod 750 -R /var/www
 
 cd /var/www/html/
 
 # Erstellt oder überschreibt die Datei info.php
 cat <<EOT > info.php
-<?php echo"hello world"; ?>
-<?php echo date('Y-m-d H:i:s'); ?>
 <?php phpinfo(); ?>
 EOT
 
@@ -51,8 +40,6 @@ cat <<EOT > info.html
 </html>
 EOT
 
-echo "Datei info.html wurde erstellt/überschrieben."
-
 cd
 
 sudo service apache2 restart
@@ -70,8 +57,6 @@ sudo service apache2 restart
 sudo ufw allow sudo ufw allow "WWW Full" && 22/tcp && sudo ufw allow 80/tcp && sudo ufw allow 443/tcp && sudo ufw allow 3025/tcp && sudo ufw allow 3025/udp && sudo ufw allow OpenSSH && sudo ufw allow from any to any port 3389 proto tcp && sudo ufw status && sudo ufw --force enable
 
 sudo apt update && sudo apt upgrade
-
-rm /var/www/html/wordpress.zip
 
 sudo service apache2 restart
 
