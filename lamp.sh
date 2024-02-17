@@ -8,17 +8,10 @@ clear
 
 lxterminal -e htop
 
-sudo wget https://wordpress.org/latest.zip -O /var/www/html/wordpress.zip
-cd /var/www/html
-sudo unzip wordpress.zip
-
 sudo apt update && sudo apt upgrade
 
 sudo chown -R serverpi:www-data -R /var/www/html
 chmod 750 -R /var/www/html
-
-sudo chown www-data wordpress -R
-sudo chmod 755 -R /var/www/wordpress
 
 sudo chown -R serverpi:www-data -R /var/www
 chmod 750 -R /var/www
@@ -71,9 +64,7 @@ sudo ufw allow sudo ufw allow "WWW Full" && 22/tcp && sudo ufw allow 80/tcp && s
 
 sudo apt update && sudo apt upgrade
 
-sudo service apache2 restart wordpress.zip
-
-rm /var/www/html/wordpress.zip
+sudo service apache2 restart
 
 clear
 
@@ -83,7 +74,6 @@ echo "Sie sollten das System jetzt neu starten."
 # https://raspberrytips.com/wordpress-on-raspberry-pi/
 # https://projects.raspberrypi.org/en/projects/lamp-web-server-with-wordpress/
 # https://www.makeuseof.com/tag/host-wordpress-raspberry-pi/
-#
 
 # sudo mysql -u root -p
 # DROP USER 'root'@'localhost';
