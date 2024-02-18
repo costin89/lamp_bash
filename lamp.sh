@@ -10,13 +10,7 @@ lxterminal -e htop
 
 clear
 
-sudo wget https://wordpress.org/latest.zip -O /var/www/html/wordpress.zip
-cd /var/www/html
-sudo unzip wordpress.zip
-
 sudo apt update && sudo apt upgrade
-
-sudo chown www-data wordpress -R /var/www/html && sudo chmod 750 -R /var/www/html/wordpress
 
 sudo chown -R admin:www-data -R /var/www/html && chmod 750 -R /var/www/html
 
@@ -67,8 +61,6 @@ sudo ufw allow sudo ufw allow "WWW Full" && 22/tcp && sudo ufw allow 80/tcp && s
 sudo apt update && sudo apt upgrade
 
 sudo service apache2 restart
-
-rm /var/www/html/wordpress.zip
 
 clear
 
