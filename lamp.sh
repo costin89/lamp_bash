@@ -2,39 +2,37 @@
 
 sudo apt update && sudo apt upgrade
 
-sudo apt-get install -y htop 
-sudo apt-get install -y proftpd 
-sudo apt-get install -y ufw 
-sudo apt-get install -y openssh-server 
-sudo apt-get install -y apache2 
-sudo apt-get install -y lsb-release 
-sudo apt-get install -y php php-mysql 
-sudo apt-get install -y phpmyadmin 
-sudo apt-get install -y mariadb-server 
-sudo apt-get install -y libapache2-mod-php 
-sudo apt-get install -y php-cli 
-sudo apt-get install -y php-fpm 
-sudo apt-get install -y php-json 
-sudo apt-get install -y php-common 
-sudo apt-get install -y php-mysql 
-sudo apt-get install -y php-zip 
-sudo apt-get install -y php-gd 
-sudo apt-get install -y php-intl 
-sudo apt-get install -y php-mbstring 
-sudo apt-get install -y php-curl 
-sudo apt-get install -y php-xml 
-sudo apt-get install -y php-pear 
-sudo apt-get install -y php-tidy 
-sudo apt-get install -y php-soap 
-sudo apt-get install -y php-bcmath 
-sudo apt-get install -y php-xmlrpc 
+sudo apt-get install -y htop &&
+sudo apt-get install -y proftpd &&
+sudo apt-get install -y ufw &&
+sudo apt-get install -y openssh-server &&
+sudo apt-get install -y apache2 &&
+sudo apt-get install -y lsb-release &&
+sudo apt-get install -y php php-mysql &&
+sudo apt-get install -y phpmyadmin &&
+sudo apt-get install -y mariadb-server &&
+sudo apt-get install -y libapache2-mod-php &&
+sudo apt-get install -y php-cli &&
+sudo apt-get install -y php-fpm &&
+sudo apt-get install -y php-json &&
+sudo apt-get install -y php-common &&
+sudo apt-get install -y php-mysql &&
+sudo apt-get install -y php-zip &&
+sudo apt-get install -y php-gd &&
+sudo apt-get install -y php-intl &&
+sudo apt-get install -y php-mbstring &&
+sudo apt-get install -y php-curl &&
+sudo apt-get install -y php-xml &&
+sudo apt-get install -y php-pear &&
+sudo apt-get install -y php-tidy &&
+sudo apt-get install -y php-soap &&
+sudo apt-get install -y php-bcmath &&
+sudo apt-get install -y php-xmlrpc &&
 sudo apt-get install -y vsftpd
 
 clear
 
-lxterminal -e htop
-
-clear
+# lxterminal -e htop
 
 sudo apt update && sudo apt upgrade
 
