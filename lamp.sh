@@ -34,8 +34,6 @@ clear
 
 # lxterminal -e htop
 
-sudo apt update && sudo apt upgrade
-
 sudo chown -R admin:www-data -R /var/www/html && chmod 750 -R /var/www/html
 
 sudo chown -R admin:www-data -R /var/www && chmod 750 -R /var/www
@@ -70,19 +68,17 @@ cd
 
 sudo service apache2 restart
 
-sudo apt install nodejs npm
+sudo apt install -y nodejs npm
 
 nodejs -v
 
 clear
 
-sudo apt update && sudo apt upgrade
-
 sudo service apache2 restart
 
 sudo ufw allow sudo ufw allow "WWW Full" && 22/tcp && sudo ufw allow 80/tcp && sudo ufw allow 443/tcp && sudo ufw allow 3025/tcp && sudo ufw allow 3025/udp && sudo ufw allow OpenSSH && sudo ufw allow from any to any port 3389 proto tcp && sudo ufw status && sudo ufw --force enable
 
-sudo apt update && sudo apt upgrade
+sudo apt update 
 
 sudo service apache2 restart
 
