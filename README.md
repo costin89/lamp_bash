@@ -6,6 +6,4 @@ curl -sSL [https://raw.githubusercontent.com/costin89/lamp_bash/main/hostrename.
 
 exit
 
-curl -sSL https://raw.githubusercontent.com/costin89/lamp_bash/main/lamp.sh | bash
-
-curl -sSL https://raw.githubusercontent.com/costin89/lamp_bash/main/lamp_zero.sh | bash
+curl -sSL https://raw.githubusercontent.com/costin89/lamp_bash/main/l.sh | bash
