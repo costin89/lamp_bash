@@ -13,6 +13,12 @@ sudo chmod 750 -R /var/www/html
 sudo chown -R admin:www-data /var/www
 sudo chmod 750 -R /var/www
 
+sudo chmod 775 /var/www/html/
+sudo chown -R admin:www-data /var/www/html/
+
+sudo chmod 775 /var/www
+sudo chown -R admin:www-data /var/www
+
 # Create a PHP info file
 cat <<EOT > /var/www/html/info.php
 <?php phpinfo(); ?>
